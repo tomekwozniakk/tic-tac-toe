@@ -54,6 +54,7 @@ function selectGameAreaElement(e) {
   const winnerIndex = checkForGameOver();
   if (winnerIndex !== 0) {
     endGame(winnerIndex);
+    return;
   }
 
   currentRound++;

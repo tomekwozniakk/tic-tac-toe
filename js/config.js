@@ -29,5 +29,8 @@ function savePlayerConfig(e) {
   updatedPlayerData.children[1].textContent = enteredPlayerName;
 
   players[editedPlayer - 1].name = enteredPlayerName;
+
+  activePlayerName.textContent = enteredPlayerName;
+  
   closePlayerConfig();
 }
