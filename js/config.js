@@ -9,7 +9,7 @@ function closePlayerConfig() {
   backdrop.style.display = "none";
   form.firstElementChild.classList.remove("error");
   errorsOutput.textContent = "";
-  document.getElementById("playername").value = '';
+  document.getElementById("playername").value = "";
 }
 
 function savePlayerConfig(e) {
@@ -30,7 +30,9 @@ function savePlayerConfig(e) {
 
   players[editedPlayer - 1].name = enteredPlayerName;
 
-  activePlayerName.textContent = enteredPlayerName;
-  
+  if (editedPlayer === activePlayer) {
+    activePlayerName.textContent = enteredPlayerName;
+  }
+
   closePlayerConfig();
 }
